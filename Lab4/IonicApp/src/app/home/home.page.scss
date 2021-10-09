@@ -1,0 +1,166 @@
+button {
+  display: inline-block;
+  height: 134px;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  width: 104px;
+}
+
+#close-image img {
+  display: block;
+  height: 130px;  
+  width: 100px;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75 {
+      width: 100%;
+      margin-top: 0;
+  }
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.alertError {
+  padding: 20px;
+  background-color: #ff8181;
+  color: white;
+}
+.alertSuccess {
+  padding: 20px;
+  background-color: #5ab300;
+  color: white;
+}
+.alertMissing{
+  padding: 20px;
+  background-color: #00b3a4;
+  color: white;
+}
+.alertWarning{
+  padding: 20px;
+  background-color: #ccc531;
+  color: white;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color: black;
+}
+table {
+  align-items: center;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td{
+  border: 1px solid #337ab7;
+  text-align: left;
+  padding: 8px;
+  width: 20%;
+
+}
+th {
+  border: 1px solid #337ab7;
+  background-color: #1e496d;
+  text-align: center;
+  color:#fff;
+  padding: 8px;
+  width: 20%;
+}
+
+tr:nth-child(even) {
+  border: 2px solid #0f2436; 
+  background-color: #8c97a1;
+}
+.containerscroll {
+  overflow: hidden; 
+  white-space: nowrap;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scroll {
+    overflow: auto;
+  }
+}

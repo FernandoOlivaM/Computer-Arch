@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Plane Data
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Avion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<fieldset>
+  <table border="1" class="data-table" >
+    <tr >
+      <th *ngFor="let header of tableHeaders" text-center><b>
+        {{ header.replace("_"," ").replace("_"," ").replace("-"," ") }}
+      </b></th>
+    </tr>
+ 
+    <ng-container>
+    <tr *ngFor="let row of tableContent">
+      <td *ngFor="let value of row">
+       {{ value.Date }}
+       {{ value.Message }}
+       {{ value.Status }}
+     </td>
+    </tr>
+   </ng-container>
+ 
+  </table>
+</fieldset>
+
+</ion-content>
