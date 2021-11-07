@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title size="large">Última Operación</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class={{Alert_Color}} *ngIf="showAlert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>{{Alert_Status}}</strong>{{Alert_Text}}
+</div>
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Última Operación</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<fieldset>
+  <table border="1" class="data-table" >
+    <tr style="max-width: 100px;">
+      <th *ngFor="let header of tableHeaders" text-center ><b>
+        {{ header.replace("Count","Device Number").replace("_"," ").replace("-"," ") }}
+      </b></th>
+      <th>Operation Number</th>
+      <th>Do Operation</th>      
+    </tr>
+ 
+    <ng-container>
+    <tr *ngFor="let row of tableContent">
+      <td *ngFor="let value of row">
+        {{ value.UUID }}
+        {{ value.Date }}
+        {{ value.Device }}
+        {{ value.Operation }}
+        {{ value.Count }}
+     </td>
+     <td>
+      <ion-input type="text" placeholder="Insert Operation Number" #Input> </ion-input>
+     </td>
+     <td>
+      <ion-button color="primary" ion-button fill="outline" (click)="send(Input)">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+     </td>
+    </tr>
+   </ng-container>
+ 
+  </table>
+</fieldset>
+
+</ion-content>
